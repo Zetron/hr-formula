@@ -72,7 +72,12 @@
       "Bash(echo \"git: $\\(git --version || echo 'НЕ установлен'\\)\")",
       "Bash(gh --version)",
       "Bash(echo \"gh: $\\(gh --version)",
-      "Bash(grep -v '^\\\\.git$')"
+      "Bash(grep -v '^\\\\.git$')",
+      "Bash(curl -fsS \"https://zetron.github.io/hr-formula/content/reviews.json\")",
+      "Bash(curl -fsS \"https://zetron.github.io/hr-formula/content/press.json\")",
+      "Bash(curl -s -o /dev/null -w '%{http_code}\\\\n' https://zetron.github.io/hr-formula/assets/IMAGE%202025-04-28%2013654%20PM.jpg)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}\\\\n' https://zetron.github.io/assets/IMAGE%202025-04-28%2013654%20PM.jpg)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://zetron.github.io/hr-formula/assets/case-dark.jpg\")"
     ]
   }
 }

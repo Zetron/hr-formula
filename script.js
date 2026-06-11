@@ -215,6 +215,15 @@
      Источник правды — content/reviews.json и content/press.json
      (их редактирует CMS). Здесь они подтягиваются и строится разметка. */
 
+  // CMS сохраняет пути картинок от корня ("/assets/…"), а сайт может лежать
+  // в подпапке (github.io/hr-formula/). Делаем путь относительным к странице,
+  // чтобы он работал и в подпапке, и локально; кодируем пробелы/кириллицу.
+  function assetUrl(p) {
+    if (!p) return "";
+    if (/^https?:\/\//i.test(p)) return p; // внешняя ссылка — как есть
+    return encodeURI(p.replace(/^\/+/, ""));
+  }
+
   function renderReviews(items) {
     const grid = document.getElementById("reviewsSlider");
     if (!grid || !Array.isArray(items)) return;
@@ -233,7 +242,7 @@
 
       const avatar = document.createElement("img");
       avatar.className = "reviews__avatar";
-      avatar.src = r.avatar || "";
+      avatar.src = assetUrl(r.avatar);
       avatar.alt = r.name || "";
       avatar.width = 72;
       avatar.height = 72;
@@ -270,7 +279,7 @@
 
       const img = document.createElement("img");
       img.className = "press__img";
-      img.src = p.image || "";
+      img.src = assetUrl(p.image);
       img.alt = "";
       img.setAttribute("aria-hidden", "true");
       img.loading = "lazy";
