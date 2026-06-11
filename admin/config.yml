@@ -10,7 +10,7 @@ backend:
   branch: main
   # ⬇️ ЗАМЕНИТЕ на адрес вашего OAuth-воркера на Cloudflare
   #    (см. инструкцию, шаг «Авторизация»). Для Netlify-хостинга — удалите эту строку.
-  base_url: https://ВАШ-ВОРКЕР.workers.dev
+  base_url: https://sveltia-cms-auth.zetron-and.workers.dev
 
 # Куда CMS загружает картинки и какой путь подставляет в данные.
 # Пути относительные — чтобы работало и на github.io/имя-репозитория.
