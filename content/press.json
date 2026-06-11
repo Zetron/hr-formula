@@ -17,6 +17,12 @@
       "image": "assets/press-3.jpg",
       "url": "#",
       "big": false
+    },
+    {
+      "caption": "Оптимизация штата: как сократить расходы",
+      "image": "/assets/case-dark.jpg",
+      "url": "#",
+      "big": false
     }
   ]
 }
