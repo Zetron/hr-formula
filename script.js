@@ -319,6 +319,13 @@
   loadJSON("content/press.json")
     .then(function (data) {
       renderPress((data && data.items) || []);
+      // карусель «СМИ о нас» — инициализируем ПОСЛЕ рендера карточек
+      initCarousel(
+        document.getElementById("pressGrid"),
+        ".press__card",
+        null,
+        null
+      );
     })
     .catch(function (err) {
       console.warn("[HR] Не удалось загрузить блок «СМИ о нас»:", err);

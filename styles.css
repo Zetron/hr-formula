@@ -1209,14 +1209,40 @@ img {
   color: var(--color-primary);
 }
 
+/* горизонтальная карусель с drag-to-scroll (как 4-й блок «Кейсы»):
+   новые карточки уходят вбок, а не переносятся на новую строку */
 .reviews__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  display: flex;
   gap: 32px;
   align-items: stretch;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  /* full-bleed к краям контейнера, первая карточка выровнена с контентом */
+  margin-inline: calc(-1 * var(--container-pad));
+  padding-inline: var(--container-pad);
+  scroll-padding-inline: var(--container-pad);
+  scrollbar-width: none;
+  cursor: grab;
+}
+.reviews__grid::-webkit-scrollbar {
+  display: none;
+}
+.reviews__grid.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+  user-select: none;
+}
+.reviews__grid img,
+.press__grid img {
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .reviews__card {
+  flex: 0 0 400px;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1283,14 +1309,34 @@ img {
   color: var(--color-primary);
 }
 
+/* горизонтальная карусель с drag-to-scroll: большая карточка + маленькие,
+   новые карточки уходят вбок, а не переносятся на новую строку */
 .press__grid {
-  display: grid;
-  grid-template-columns: 640fr 304fr 304fr;
+  display: flex;
   gap: 32px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  margin-inline: calc(-1 * var(--container-pad));
+  padding-inline: var(--container-pad);
+  scroll-padding-inline: var(--container-pad);
+  scrollbar-width: none;
+  cursor: grab;
+}
+.press__grid::-webkit-scrollbar {
+  display: none;
+}
+.press__grid.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+  user-select: none;
 }
 
 .press__card {
   position: relative;
+  flex: 0 0 304px;
+  scroll-snap-align: start;
   display: flex;
   align-items: flex-end;
   height: 400px;
@@ -1299,6 +1345,11 @@ img {
   overflow: hidden;
   color: #fff;
   text-decoration: none;
+  -webkit-user-drag: none;
+}
+
+.press__card--big {
+  flex-basis: 640px;
 }
 
 .press__img {
@@ -1540,13 +1591,7 @@ img {
     min-height: 180px;
   }
 
-  /* press: большая карточка на всю ширину, две маленькие — в ряд под ней */
-  .press__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .press__card--big {
-    grid-column: 1 / -1;
-  }
+  /* press: карусель остаётся, карточки ниже на планшете */
   .press__card {
     height: 300px;
   }
@@ -2069,11 +2114,17 @@ img {
   .press__title {
     font-size: 26px;
   }
+  /* на мобиле «СМИ» — обратно в вертикальную стопку (не карусель) */
   .press__grid {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
+    margin-inline: 0;
+    padding-inline: 0;
+    overflow-x: visible;
   }
   .press__card {
+    flex: none;
     height: 220px;
   }
   .press__caption {
