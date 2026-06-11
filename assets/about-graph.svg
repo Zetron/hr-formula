@@ -1,0 +1,17 @@
+<svg width="350.5" height="230.5" viewBox="0 0 350.5 230.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 334788">
+<path id="Vector 4" d="M58.0001 138.5C39.1959 138.5 13.8335 164.667 1.00013 166.5V230.5H350.5V1C343.833 7.66667 325 29 299.5 29C268.906 29 277 70.5 241.5 70.5C204.5 70.5 204 106 168 106C131.5 106 129.5 160 110 160C88.7751 160 74.0001 138.5 58.0001 138.5Z" fill="url(#paint0_linear_0_7)"/>
+<path id="Vector 3" d="M1.00013 166.5C13.8335 164.667 39.1959 138.5 58.0001 138.5C74.0001 138.5 87.7751 160 109 160C131 160 130.5 105.5 168 106C205.5 106.5 202.5 71 241 70.5C279.5 70 266.5 29 299.5 29C329.5 29 342.833 7.66667 349.5 1" stroke="var(--stroke-0, #9969A3)" stroke-width="2" stroke-linecap="round"/>
+<circle id="Ellipse 2" cx="58.0001" cy="138.5" r="5" fill="var(--fill-0, #FAFAF9)" stroke="var(--stroke-0, #9969A3)" stroke-width="2"/>
+<circle id="Ellipse 3" cx="110" cy="159.5" r="5" fill="var(--fill-0, #FAFAF9)" stroke="var(--stroke-0, #9969A3)" stroke-width="2"/>
+<circle id="Ellipse 4" cx="168" cy="106.5" r="5" fill="var(--fill-0, #FAFAF9)" stroke="var(--stroke-0, #9969A3)" stroke-width="2"/>
+<circle id="Ellipse 5" cx="241" cy="70" r="5" fill="var(--fill-0, #FAFAF9)" stroke="var(--stroke-0, #9969A3)" stroke-width="2"/>
+<circle id="Ellipse 6" cx="299" cy="28.5" r="5" fill="var(--fill-0, #FAFAF9)" stroke="var(--stroke-0, #9969A3)" stroke-width="2"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_7" x1="175.25" y1="17" x2="175.25" y2="230.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9969A3" stop-opacity="0.24"/>
+<stop offset="1" stop-color="#9969A3" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

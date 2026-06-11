@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "caption": "HR-стратегия: как создать команду мечты",
+      "image": "assets/press-1.jpg",
+      "url": "#",
+      "big": true
+    },
+    {
+      "caption": "KPI для HR: как измерить эффективность",
+      "image": "assets/press-2.jpg",
+      "url": "#",
+      "big": false
+    },
+    {
+      "caption": "Оптимизация штата: как сократить расходы",
+      "image": "assets/press-3.jpg",
+      "url": "#",
+      "big": false
+    }
+  ]
+}

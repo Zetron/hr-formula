@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HR-формула</title>
+  <meta name="description" content="Построение автономной системы управления персоналом для собственников бизнеса" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#" class="logo">HR-формула</a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#solutions" class="nav__link">Решения</a></li>
+          <li><a href="#about" class="nav__link">Кто мы</a></li>
+          <li><a href="#reviews" class="nav__link">Отзывы</a></li>
+        </ul>
+
+        <!-- нижняя зона меню: видна только в мобильном фуллскрин-меню -->
+        <div class="nav__foot">
+          <a href="#contact" class="btn btn--pill nav__cta">Написать нам</a>
+          <a href="mailto:mail@gmail.com" class="nav__email">mail@gmail.com</a>
+        </div>
+      </nav>
+
+      <a href="#contact" class="btn btn--pill header__cta">Написать нам</a>
+
+      <button
+        class="burger"
+        id="burger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        aria-controls="nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- backdrop for mobile menu -->
+  <div class="menu-overlay" id="menuOverlay" hidden></div>
+
+  <!-- ============ HERO ============ -->
+  <main>
+    <section class="hero">
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <h1 class="hero__title">HR-формула</h1>
+          <p class="hero__subtitle">
+            Построение автономной системы управления персоналом
+            для собственников бизнеса
+          </p>
+          <a href="#contact" class="btn btn--cta">
+            <span class="btn--cta__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12h15M13 6l6 6-6 6" stroke="#5a3853" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Написать нам
+          </a>
+        </div>
+
+        <div class="hero__media">
+          <svg class="hero__pattern" viewBox="0 0 848 594" width="848" height="594" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <g>
+              <path d="M719.828 149.753C747.397 177.322 792.095 177.322 819.664 149.753C847.233 122.185 847.233 77.4867 819.664 49.9178C792.095 22.349 747.397 22.349 719.828 49.9178C692.259 77.4866 692.259 122.185 719.828 149.753Z" fill="#5A3853"/>
+              <path d="M296.27 432.133C323.839 459.701 368.536 459.701 396.105 432.133C423.674 404.564 423.674 359.866 396.105 332.297C368.536 304.728 323.839 304.728 296.27 332.297C268.701 359.866 268.701 404.564 296.27 432.133Z" fill="#5A3853"/>
+              <path d="M337.778 417.913C357.501 422.568 377.264 410.353 381.919 390.63C386.574 370.907 374.359 351.145 354.636 346.49C334.913 341.834 315.15 354.049 310.495 373.773C305.84 393.496 318.055 413.258 337.778 417.913Z" fill="#FDF9F3"/>
+              <path d="M840.355 452.82L772.553 452.82C772.553 493.348 739.703 526.198 699.176 526.198L699.176 594C777.14 594 840.355 530.793 840.355 452.82Z" fill="#5A3853"/>
+              <path d="M606.062 391.536C611.208 403.959 625.45 409.858 637.873 404.713C650.296 399.567 656.196 385.324 651.05 372.901C645.904 360.478 631.662 354.579 619.238 359.725C606.815 364.87 600.916 379.113 606.062 391.536Z" fill="#5A3853"/>
+              <path d="M134.405 594L275.594 452.811L275.594 594L134.405 594Z" fill="#5A3853"/>
+              <path d="M242.025 560.443L242.025 486.377L167.959 486.377L167.959 560.443L242.025 560.443Z" fill="#5A3853"/>
+              <path d="M167.959 560.443L242.025 486.377L242.025 560.443L167.959 560.443Z" fill="#FDF9F3"/>
+              <path d="M699.158 311.622L840.355 170.434L699.158 170.434L699.158 311.622Z" fill="#5A3853"/>
+              <path d="M732.723 278.066L806.789 278.066L806.789 204L732.723 204L732.723 278.066Z" fill="#5A3853"/>
+              <path d="M732.723 278.057L806.789 203.99L732.723 203.99L732.723 278.057Z" fill="white"/>
+              <path d="M708.612 452.811C708.612 380.168 767.712 321.068 840.355 321.068L840.355 328.537C771.828 328.537 716.081 384.284 716.081 452.811L708.612 452.811Z" fill="#5A3853"/>
+              <path d="M722.725 452.811C722.725 387.955 775.49 335.181 840.355 335.181L840.355 342.65C779.614 342.65 730.204 392.061 730.204 452.802L722.734 452.802L722.725 452.811Z" fill="#5A3853"/>
+              <path d="M736.848 452.811C736.848 395.741 783.285 349.304 840.355 349.304L840.355 356.773C787.401 356.773 744.317 399.856 744.317 452.811L736.848 452.811Z" fill="#5A3853"/>
+              <path d="M750.961 452.811C750.961 403.518 791.063 363.426 840.355 363.426L840.355 370.895C795.187 370.895 758.439 407.643 758.439 452.811L750.97 452.811L750.961 452.811Z" fill="#5A3853"/>
+              <path d="M765.084 452.811C765.084 411.305 798.849 377.54 840.355 377.54L840.355 385.009C802.973 385.009 772.553 415.42 772.553 452.802L765.084 452.802L765.084 452.811Z" fill="#5A3853"/>
+              <path d="M427.158 442.432L427.158 322.001L547.58 322.001L547.58 442.432L427.158 442.432ZM434.636 329.48L434.636 434.963L540.12 434.963L540.12 329.48L434.636 329.48Z" fill="#5A3853"/>
+              <path d="M441.281 428.31L441.281 336.124L533.467 336.124L533.467 428.31L441.281 428.31ZM448.75 343.593L448.75 420.841L525.989 420.841L525.989 343.593L448.75 343.593Z" fill="#5A3853"/>
+              <path d="M455.403 414.196L455.403 350.246L519.344 350.246L519.344 414.196L455.403 414.196ZM462.872 357.715L462.872 406.727L511.875 406.727L511.875 357.715L462.872 357.715Z" fill="#5A3853"/>
+              <path d="M313.992 240.823C329.455 242.99 343.748 232.212 345.916 216.749C348.083 201.286 337.305 186.994 321.842 184.826C306.379 182.658 292.086 193.436 289.919 208.899C287.751 224.362 298.529 238.655 313.992 240.823Z" fill="#5A3853"/>
+              <path d="M312.539 297.011C327.873 299.961 342.694 289.922 345.644 274.589C348.594 259.256 338.555 244.435 323.222 241.485C307.889 238.535 293.068 248.573 290.118 263.906C287.168 279.24 297.206 294.061 312.539 297.011Z" fill="#5A3853"/>
+              <path d="M346.184 212.819C346.184 228.434 358.842 241.091 374.456 241.091C390.071 241.091 402.729 228.434 402.729 212.819C402.729 197.205 390.071 184.547 374.456 184.547C358.842 184.547 346.184 197.205 346.184 212.819Z" fill="#5A3853"/>
+              <path d="M346.184 269.237C346.184 284.851 358.842 297.509 374.456 297.509C390.071 297.509 402.729 284.851 402.729 269.237C402.729 253.622 390.071 240.965 374.456 240.965C358.842 240.965 346.184 253.622 346.184 269.237Z" fill="#5A3853"/>
+              <path d="M572.016 495.206C572.016 510.82 584.674 523.478 600.288 523.478C615.903 523.478 628.561 510.82 628.561 495.206C628.561 479.592 615.903 466.934 600.288 466.934C584.674 466.934 572.016 479.592 572.016 495.206Z" fill="#5A3853"/>
+              <path d="M572.016 551.614C572.016 567.229 584.674 579.887 600.288 579.887C615.903 579.887 628.561 567.229 628.561 551.614C628.561 536 615.903 523.342 600.288 523.342C584.674 523.342 572.016 536 572.016 551.614Z" fill="#5A3853"/>
+              <path d="M628.561 495.206C628.561 510.82 641.219 523.478 656.833 523.478C672.448 523.478 685.105 510.82 685.105 495.206C685.105 479.592 672.448 466.934 656.833 466.934C641.219 466.934 628.561 479.592 628.561 495.206Z" fill="#5A3853"/>
+              <path d="M628.561 551.614C628.561 567.229 641.219 579.887 656.833 579.887C672.448 579.887 685.105 567.229 685.105 551.614C685.105 536 672.448 523.342 656.833 523.342C641.219 523.342 628.561 536 628.561 551.614Z" fill="#5A3853"/>
+              <path d="M310.886 558.703L381.48 558.703L381.48 488.108L310.886 488.108L310.886 558.703Z" fill="#5A3853"/>
+              <path d="M593.267 276.389L663.861 276.389L663.861 205.794L593.267 205.794L593.267 276.389Z" fill="#5A3853"/>
+              <path d="M536.604 474.104L536.604 460.317L550.473 460.317L536.604 474.104Z" fill="#5A3853"/>
+              <path d="M536.604 496.584L536.604 482.797L550.473 482.797L536.604 496.584Z" fill="#5A3853"/>
+              <path d="M536.604 519.064L536.604 505.277L550.473 505.277L536.604 519.064Z" fill="#5A3853"/>
+              <path d="M536.604 541.544L536.604 527.757L550.473 527.757L536.604 541.544Z" fill="#5A3853"/>
+              <path d="M536.604 564.033L536.604 550.237L550.473 550.237L536.604 564.033Z" fill="#5A3853"/>
+              <path d="M536.604 586.513L536.604 572.717L550.473 572.717L536.604 586.513Z" fill="#5A3853"/>
+              <path d="M514.145 474.104L514.145 460.317L528.014 460.317L514.145 474.104Z" fill="#5A3853"/>
+              <path d="M514.145 496.584L514.145 482.797L528.014 482.797L514.145 496.584Z" fill="#5A3853"/>
+              <path d="M514.145 519.064L514.145 505.277L528.014 505.277L514.145 519.064Z" fill="#5A3853"/>
+              <path d="M514.145 541.544L514.145 527.757L528.014 527.757L514.145 541.544Z" fill="#5A3853"/>
+              <path d="M514.145 564.033L514.145 550.237L528.014 550.237L514.145 564.033Z" fill="#5A3853"/>
+              <path d="M514.145 586.513L514.145 572.716L528.014 572.716L514.145 586.513Z" fill="#5A3853"/>
+              <path d="M491.668 474.104L491.668 460.317L505.537 460.317L491.668 474.104Z" fill="#5A3853"/>
+              <path d="M491.668 496.584L491.668 482.797L505.537 482.797L491.668 496.584Z" fill="#5A3853"/>
+              <path d="M491.668 519.064L491.668 505.277L505.537 505.277L491.668 519.064Z" fill="#5A3853"/>
+              <path d="M491.668 541.544L491.668 527.757L505.537 527.757L491.668 541.544Z" fill="#5A3853"/>
+              <path d="M491.668 564.033L491.668 550.237L505.537 550.237L491.668 564.033Z" fill="#5A3853"/>
+              <path d="M491.668 586.513L491.668 572.716L505.537 572.716L491.668 586.513Z" fill="#5A3853"/>
+              <path d="M469.211 474.104L469.211 460.317L483.08 460.317L469.211 474.104Z" fill="#5A3853"/>
+              <path d="M469.211 496.584L469.211 482.797L483.08 482.797L469.211 496.584Z" fill="#5A3853"/>
+              <path d="M469.211 519.064L469.211 505.277L483.08 505.277L469.211 519.064Z" fill="#5A3853"/>
+              <path d="M469.211 541.544L469.211 527.757L483.08 527.757L469.211 541.544Z" fill="#5A3853"/>
+              <path d="M469.211 564.033L469.211 550.237L483.08 550.237L469.211 564.033Z" fill="#5A3853"/>
+              <path d="M469.211 586.513L469.211 572.716L483.08 572.716L469.211 586.513Z" fill="#5A3853"/>
+              <path d="M446.737 474.104L446.737 460.317L460.605 460.317L446.737 474.104Z" fill="#5A3853"/>
+              <path d="M446.737 496.584L446.737 482.797L460.605 482.797L446.737 496.584Z" fill="#5A3853"/>
+              <path d="M446.737 519.064L446.737 505.277L460.605 505.277L446.737 519.064Z" fill="#5A3853"/>
+              <path d="M446.737 541.544L446.737 527.757L460.605 527.757L446.737 541.544Z" fill="#5A3853"/>
+              <path d="M446.737 564.033L446.737 550.237L460.605 550.237L446.737 564.033Z" fill="#5A3853"/>
+              <path d="M446.737 586.513L446.737 572.716L460.605 572.716L446.737 586.513Z" fill="#5A3853"/>
+              <path d="M424.278 474.104L424.278 460.317L438.146 460.317L424.278 474.104Z" fill="#5A3853"/>
+              <path d="M424.278 496.584L424.278 482.797L438.146 482.797L424.278 496.584Z" fill="#5A3853"/>
+              <path d="M424.278 519.064L424.278 505.277L438.146 505.277L424.278 519.064Z" fill="#5A3853"/>
+              <path d="M424.278 541.544L424.278 527.757L438.146 527.757L424.278 541.544Z" fill="#5A3853"/>
+              <path d="M424.278 564.033L424.278 550.237L438.146 550.237L424.278 564.033Z" fill="#5A3853"/>
+              <path d="M424.278 586.513L424.278 572.717L438.146 572.717L424.278 586.513Z" fill="#5A3853"/>
+              <path d="M423.575 99.8392L487.371 99.8392L487.371 36.0432L423.575 99.8392Z" fill="#5A3853"/>
+              <path d="M487.374 163.635L487.374 99.8392L551.17 99.8392L487.374 163.635Z" fill="#5A3853"/>
+              <path d="M443.159 170.497L416.781 196.875L416.781 226.933L473.217 170.497L443.159 170.497Z" fill="#5A3853"/>
+              <path d="M499.701 170.497L416.779 253.419L416.779 283.468L529.75 170.497L499.701 170.497Z" fill="#5A3853"/>
+              <path d="M557.969 170.497L556.237 170.497L416.78 309.955L416.78 311.686L445.107 311.686L557.969 198.824L557.969 170.497Z" fill="#5A3853"/>
+              <path d="M557.969 225.31L471.593 311.686L501.642 311.686L557.969 255.359L557.969 225.31Z" fill="#5A3853"/>
+              <path d="M528.128 311.686L557.969 311.686L557.969 281.845L528.128 311.686Z" fill="#5A3853"/>
+              <path d="M127.594 523.406L63.7977 523.406L63.7977 587.202L127.594 523.406Z" fill="#5A3853"/>
+              <path d="M63.7969 459.61L63.7969 523.406L0.000844074 523.406L63.7969 459.61Z" fill="#5A3853"/>
+              <path d="M557.969 29.2357L557.969 170.425L699.158 170.425C699.158 92.4516 635.942 29.2357 557.969 29.2357Z" fill="#5A3853"/>
+              <path d="M275.58 311.622L134.391 311.622L134.391 452.811C212.364 452.811 275.58 389.595 275.58 311.622Z" fill="#5A3853"/>
+            </g>
+          </svg>
+          <img class="hero__photo" src="assets/team.png" alt="Две женщины — специалисты HR-формулы" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ РЕЗУЛЬТАТЫ (второй блок) ============ -->
+    <section class="results" id="solutions">
+      <div class="container">
+        <h2 class="results__title">В результате нашей работы вы и ваша команда</h2>
+
+        <div class="results__grid">
+          <!-- колонка 1 -->
+          <article class="card card--avatar">
+            <img class="card__avatar" src="assets/avatar.png" alt="HR-специалист" width="80" height="80" />
+            <p class="card__text">Наймете и обучите сильного HR-специалиста</p>
+          </article>
+
+          <article class="card card--media card--money">
+            <img class="card__img" src="assets/result-money.png" alt="" aria-hidden="true" />
+            <p class="card__text">Поймете, как управление персоналом влияет на деньги</p>
+          </article>
+
+          <article class="card card--why">
+            <p class="card__text">Разберетесь почему уходят ключевые специалисты</p>
+          </article>
+
+          <!-- колонка 2 -->
+          <article class="card card--icon card--culture">
+            <span class="card__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="11" fill="#5a3853" />
+                <path d="M7 12.4l3.2 3.2L17 8.8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <p class="card__text card__text--sm">Выстроите культуру, которая способствует реализации ваших бизнес-задач</p>
+          </article>
+
+          <article class="card card--kpi">
+            <p class="card__text">Выстроите прозрачную систему оценки эффективности команды</p>
+            <p class="card__kpi">KPI&nbsp;&nbsp;OKR</p>
+          </article>
+
+          <!-- колонка 3 (центр) -->
+          <article class="card card--tall card--top card--revision">
+            <p class="card__text card__text--lg">Проведете ревизию текущего состояния команды</p>
+            <img class="card__img" src="assets/result-team.png" alt="" aria-hidden="true" />
+          </article>
+
+          <!-- широкая карточка -->
+          <article class="card card--wide">
+            <p class="card__text card__text--xl">
+              Разберетесь в самых эффективных инструментах привлечения и
+              <span class="card__hl">
+                удержания талантов
+                <img class="card__underline" src="assets/underline.svg" alt="" aria-hidden="true" />
+              </span>
+            </p>
+          </article>
+
+          <!-- колонка 4 -->
+          <article class="card card--media card--tall card--offer">
+            <img class="card__img" src="assets/result-offer.png" alt="" aria-hidden="true" />
+            <p class="card__text">Сформируете лучший оффер на рынке труда</p>
+          </article>
+
+          <article class="card card--media card--tall card--strategy">
+            <img class="card__img" src="assets/result-strategy.png" alt="" aria-hidden="true" />
+            <p class="card__text">Разработаете HR-стратегию своего бизнеса</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ОБЕЩАНИЕ (третий блок) ============ -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta__card">
+          <img class="cta__shape cta__shape--quote" src="assets/cta-quote.svg" alt="" aria-hidden="true" />
+          <img class="cta__shape cta__shape--arrow" src="assets/cta-arrow.svg" alt="" aria-hidden="true" />
+          <p class="cta__title">
+            Мы берём на себя построение HR, а вы получаете понятную систему управления людьми
+          </p>
+          <hr class="cta__divider" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ КЕЙСЫ / СЛОЖНОСТИ (четвёртый блок) ============ -->
+    <section class="cases">
+      <div class="cases__band">
+        <div class="container cases__head">
+          <h2 class="cases__title">
+            Большинство наших клиентов сталкиваются<br />
+            с похожими сложностями в бизнесе
+          </h2>
+          <div class="cases__nav">
+            <button class="cases__arrow" type="button" data-dir="prev" aria-label="Предыдущий слайд" aria-controls="casesSlider">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="cases__arrow" type="button" data-dir="next" aria-label="Следующий слайд" aria-controls="casesSlider">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="cases__slider" id="casesSlider">
+          <!-- Карточка 1: профиль -->
+          <article class="case case--profile">
+            <img class="case__deco case__deco--stripes" src="assets/case-stripes.svg" alt="" aria-hidden="true" />
+            <div class="case__body">
+              <div class="case__person">
+                <span class="case__badge">Евгений</span>
+                <p class="case__role">предприниматель 30–35 лет</p>
+              </div>
+              <p class="case__desc">
+                Передвигается на немецкой машине, нормально зарабатывает,
+                периодически летает в заграничный отпуск. Немного подзапустил
+                себя, ведь развитие бизнеса стоит в приоритете
+              </p>
+            </div>
+          </article>
+
+          <!-- Карточка 2: фото + оверлей -->
+          <article class="case case--photo">
+            <img class="case__img" src="assets/case-man.png" alt="Евгений" />
+            <div class="case__overlay">
+              <p class="case__quote">
+                Бизнес создавался для свободы, а в итоге он оказался его пленником
+              </p>
+              <p class="case__note">
+                Складывается ощущение, что все хорошо, но все равно каждый день
+                посещают мысли, что “<b>я способен на большее</b>”
+              </p>
+            </div>
+          </article>
+
+          <!-- Карточка 3: цитата -->
+          <article class="case case--quote">
+            <div class="case__center">
+              <p class="case__line">Евгений желает быть как в песне Кипелова</p>
+              <hr class="case__divider" />
+              <p class="case__big">“Я свободен”</p>
+              <hr class="case__divider" />
+              <p class="case__line">
+                Роста дохода<br />
+                и наслаждения жизнью<br />
+                с близкими по духу людьми
+              </p>
+            </div>
+            <img class="case__deco case__deco--star" src="assets/case-star.svg" alt="" aria-hidden="true" />
+          </article>
+
+          <!-- Карточка 4: фото (тёмное) + оверлей -->
+          <article class="case case--photo case--photo-alt">
+            <img class="case__img" src="assets/case-dark.jpg" alt="" aria-hidden="true" />
+            <div class="case__overlay case__overlay--top">
+              <p class="case__note">
+                Складывается ощущение, что все хорошо, но все равно каждый день
+                посещают мысли, что “<b>я способен на большее</b>”
+              </p>
+              <p class="case__quote">
+                Бизнес создавался для свободы, а в итоге он оказался его пленником
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ЧТО ТАКОЕ HR-ФОРМУЛА (пятый блок) ============ -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__head">
+          <span class="about__badge">Что такое</span>
+          <h2 class="about__title">HR-формула</h2>
+        </div>
+
+        <div class="about__grid">
+          <!-- вводная широкая карточка -->
+          <article class="about__card about__hero-card">
+            <p class="about__hero-text">
+              Команда опытных HR-экспертов, которая помогает собственникам
+            </p>
+            <img class="about__hero-img" src="assets/about-hero.png" alt="" aria-hidden="true" />
+          </article>
+
+          <!-- карточка A -->
+          <article class="about__card about__card--a">
+            <p class="about__card-title">
+              Собрать сильный HR, который будет автономно выдавать результат
+            </p>
+            <img class="about__card-img about__card-img--report" src="assets/about-report.png" alt="" aria-hidden="true" />
+          </article>
+
+          <!-- карточка B -->
+          <article class="about__card about__card--b">
+            <p class="about__card-title">
+              Выстроить прозрачную отчетность и окупаемость затрат на сотрудников
+            </p>
+            <img class="about__card-img about__card-img--graph" src="assets/about-graph.svg" alt="" aria-hidden="true" />
+          </article>
+
+          <!-- колонка из двух карточек -->
+          <div class="about__col">
+            <article class="about__card about__card--people">
+              <p class="about__card-title about__card-title--sm">
+                Научиться стабильно привлекать и удерживать таланты
+              </p>
+              <img class="about__card-img about__card-img--people" src="assets/about-people.png" alt="" aria-hidden="true" />
+            </article>
+            <article class="about__card about__card--ruble">
+              <p class="about__card-title about__card-title--sm">
+                Превратить HR из статьи расходов в управляемый финансовый результат
+              </p>
+              <span class="about__ruble" aria-hidden="true">
+                <img src="assets/ruble.svg" alt="" />
+              </span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ЧТО ВАС ЖДЁТ (шестой блок) ============ -->
+    <section class="offer">
+      <div class="offer__band">
+        <div class="container">
+          <div class="offer__top">
+            <div class="offer__left">
+              <div class="offer__head">
+                <h2 class="offer__title">Что вас ждет</h2>
+                <p class="offer__subtitle">Сначала найм, потом построение отдела</p>
+              </div>
+              <img class="offer__illustration" src="assets/offer-illustration.png" alt="" aria-hidden="true" />
+            </div>
+
+            <ul class="offer__list">
+              <li class="offer__item">
+                <img class="offer__icon" src="assets/offer-icon-1.svg" alt="" aria-hidden="true" />
+                <p class="offer__item-text">Мы наймем своими ресурсами вам HR-специалиста</p>
+              </li>
+              <li class="offer__item">
+                <img class="offer__icon" src="assets/offer-icon-2.svg" alt="" aria-hidden="true" />
+                <p class="offer__item-text">Руками нового сотрудника выстроим отдел HR по нашей методологии</p>
+              </li>
+              <li class="offer__item">
+                <img class="offer__icon" src="assets/offer-icon-3.svg" alt="" aria-hidden="true" />
+                <p class="offer__item-text">Исполнение внедрения методологии контролирует наш опытный HR-эксперт</p>
+              </li>
+              <li class="offer__item">
+                <img class="offer__icon" src="assets/offer-icon-4.svg" alt="" aria-hidden="true" />
+                <p class="offer__item-text">Готовый отдел HR появится через 90 дней у вас в компании</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="offer__card">
+          <div class="offer__card-head">
+            <p class="offer__card-title">Если у вас уже есть отдел HR</p>
+            <p class="offer__card-sub">Мы предоставляем отдельные услуги</p>
+          </div>
+          <ul class="offer__pills">
+            <li>KPI, OKR</li>
+            <li>Оценка вовлеченности</li>
+            <li>Ассессмент талантов</li>
+            <li>Пульс-опросы</li>
+            <li>Оценка 360</li>
+            <li>eNPS</li>
+            <li>Анализ текучести</li>
+            <li>Карьерные треки</li>
+            <li>HR&nbsp;-&nbsp;исследования</li>
+            <li>Менторство руководителей</li>
+          </ul>
+          <a href="#contact" class="offer__cta">
+            <span class="offer__cta-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12h15M13 6l6 6-6 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            Написать нам
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ОТЗЫВЫ (седьмой блок) ============ -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <h2 class="reviews__title">Отзывы</h2>
+
+        <!-- Карточки рендерятся из content/reviews.json (см. script.js) -->
+        <div class="reviews__grid" id="reviewsSlider"></div>
+      </div>
+    </section>
+
+    <!-- ============ В СМИ О НАС (восьмой блок) ============ -->
+    <section class="press">
+      <div class="container">
+        <h2 class="press__title">В СМИ о нас</h2>
+
+        <!-- Карточки рендерятся из content/press.json (см. script.js) -->
+        <div class="press__grid" id="pressGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__logo">HR-формула</p>
+          <nav class="footer__nav" aria-label="Футер">
+            <a href="#solutions">Решения</a>
+            <a href="#about">Кто мы</a>
+            <a href="#reviews">Отзывы</a>
+          </nav>
+        </div>
+
+        <div class="footer__contact">
+          <a class="footer__email" href="mailto:mail@gmail.com">mail@gmail.com</a>
+          <a class="btn btn--cta footer__cta" href="#contact">
+            <span class="btn--cta__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12h15M13 6l6 6-6 6" stroke="#5a3853" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            Написать нам
+          </a>
+        </div>
+      </div>
+
+      <hr class="footer__divider" />
+
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          <p>© 2026</p>
+          <p>ИП Царапкина Виктория Викторовна</p>
+        </div>
+        <div class="footer__links">
+          <a href="#">Согласие на обработку персональных данных</a>
+          <a href="#">Политика конфиденциальность</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

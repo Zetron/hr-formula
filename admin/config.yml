@@ -1,0 +1,64 @@
+# ============================================================
+#  Конфигурация Sveltia CMS для сайта HR-формула
+#  Документация: https://github.com/sveltia/sveltia-cms
+# ============================================================
+
+backend:
+  name: github
+  # ⬇️ ЗАМЕНИТЕ на ваш GitHub-репозиторий в формате логин/название
+  repo: ВАШ-ЛОГИН/ВАШ-РЕПОЗИТОРИЙ
+  branch: main
+  # ⬇️ ЗАМЕНИТЕ на адрес вашего OAuth-воркера на Cloudflare
+  #    (см. инструкцию, шаг «Авторизация»). Для Netlify-хостинга — удалите эту строку.
+  base_url: https://ВАШ-ВОРКЕР.workers.dev
+
+# Куда CMS загружает картинки и какой путь подставляет в данные.
+# Пути относительные — чтобы работало и на github.io/имя-репозитория.
+media_folder: assets
+public_folder: assets
+
+# Локаль интерфейса
+locale: ru
+
+collections:
+  # ---------- ОТЗЫВЫ ----------
+  - name: reviews
+    label: Отзывы
+    icon: format_quote
+    files:
+      - name: reviews_list
+        label: Список отзывов
+        file: content/reviews.json
+        description: Добавляйте, удаляйте и переставляйте отзывы. Сколько карточек — столько и отзывов на сайте.
+        fields:
+          - name: items
+            label: Отзывы
+            label_singular: Отзыв
+            widget: list
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { name: text, label: Текст отзыва, widget: text }
+              - { name: name, label: Имя, widget: string }
+              - { name: role, label: Должность / компания, widget: string }
+              - { name: avatar, label: Аватар (квадрат, ≈144×144), widget: image, required: false }
+
+  # ---------- В СМИ О НАС ----------
+  - name: press
+    label: В СМИ о нас
+    icon: newspaper
+    files:
+      - name: press_list
+        label: Карточки «СМИ о нас»
+        file: content/press.json
+        description: Карточки публикаций. Первая «большая» карточка отмечается переключателем «Большая карточка».
+        fields:
+          - name: items
+            label: Карточки
+            label_singular: Карточка
+            widget: list
+            summary: "{{fields.caption}}"
+            fields:
+              - { name: caption, label: Заголовок, widget: string }
+              - { name: image, label: Изображение, widget: image }
+              - { name: url, label: Ссылка на статью, widget: string, required: false, default: "#" }
+              - { name: big, label: Большая карточка, widget: boolean, default: false }
