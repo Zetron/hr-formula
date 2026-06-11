@@ -1218,10 +1218,18 @@ img {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  /* full-bleed к краям контейнера, первая карточка выровнена с контентом */
-  margin-inline: calc(-1 * var(--container-pad));
-  padding-inline: var(--container-pad);
-  scroll-padding-inline: var(--container-pad);
+  /* full-bleed во всю ширину вьюпорта (как «Кейсы») — без белой полосы справа
+     на широких экранах; первая карточка выровнена с контейнером */
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding-inline: max(
+    var(--container-pad),
+    calc((100vw - var(--container-max)) / 2 + var(--container-pad))
+  );
+  scroll-padding-inline: max(
+    var(--container-pad),
+    calc((100vw - var(--container-max)) / 2 + var(--container-pad))
+  );
   scrollbar-width: none;
   cursor: grab;
 }
@@ -1317,9 +1325,17 @@ img {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  margin-inline: calc(-1 * var(--container-pad));
-  padding-inline: var(--container-pad);
-  scroll-padding-inline: var(--container-pad);
+  /* full-bleed во всю ширину вьюпорта (как «Кейсы») — без белой полосы справа */
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding-inline: max(
+    var(--container-pad),
+    calc((100vw - var(--container-max)) / 2 + var(--container-pad))
+  );
+  scroll-padding-inline: max(
+    var(--container-pad),
+    calc((100vw - var(--container-max)) / 2 + var(--container-pad))
+  );
   scrollbar-width: none;
   cursor: grab;
 }
@@ -2119,6 +2135,7 @@ img {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
+    width: auto;
     margin-inline: 0;
     padding-inline: 0;
     overflow-x: visible;
