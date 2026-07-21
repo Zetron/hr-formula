@@ -77,7 +77,10 @@
       "Bash(curl -fsS \"https://zetron.github.io/hr-formula/content/press.json\")",
       "Bash(curl -s -o /dev/null -w '%{http_code}\\\\n' https://zetron.github.io/hr-formula/assets/IMAGE%202025-04-28%2013654%20PM.jpg)",
       "Bash(curl -s -o /dev/null -w '%{http_code}\\\\n' https://zetron.github.io/assets/IMAGE%202025-04-28%2013654%20PM.jpg)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://zetron.github.io/hr-formula/assets/case-dark.jpg\")"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://zetron.github.io/hr-formula/assets/case-dark.jpg\")",
+      "Bash(curl -s -o /tmp/orgchart.png \"https://www.figma.com/api/mcp/asset/5dc3a556-d2f6-419b-b599-3ce6df3cd7a8\")",
+      "Bash(curl -s -o /tmp/col3.png \"https://www.figma.com/api/mcp/asset/68d3e624-3fb6-4ecd-a44e-fd7e210b2776\")",
+      "Bash(curl -sL -o fig-women.bin \"https://www.figma.com/api/mcp/asset/c878198b-a054-4ed2-87eb-2c8ab672b2f3\")"
     ]
   }
 }

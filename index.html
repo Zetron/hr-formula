@@ -8,13 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <!-- ?v=N — при правках стилей/скрипта увеличить число, чтобы сбросить кэш браузера -->
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
   <!-- ============ HEADER ============ -->
   <header class="header" id="header">
     <div class="header__inner container">
-      <a href="#" class="logo">HR-формула</a>
+      <a href="#" class="logo">Бюро КПД</a>
 
       <nav class="nav" id="nav" aria-label="Основная навигация">
         <ul class="nav__list">
@@ -30,7 +31,7 @@
         </div>
       </nav>
 
-      <a href="#contact" class="btn btn--pill header__cta">Написать нам</a>
+      <a href="#contact" class="btn btn--pill header__cta">Консультация</a>
 
       <button
         class="burger"
@@ -54,18 +55,22 @@
     <section class="hero">
       <div class="hero__inner container">
         <div class="hero__content">
-          <h1 class="hero__title">HR-формула</h1>
+          <h1 class="hero__title">
+            Покажем, кто из вашей команды реально работает,<br />
+            а кто только числится
+          </h1>
           <p class="hero__subtitle">
-            Построение автономной системы управления персоналом
-            для собственников бизнеса
+            Аудит ролей, ФОТ и KPI. Пересобираем структуру вручную
+            и передаём готовую систему: регламенты, KPI, таблицы и зоны
+            ответственности. Без долгих внедрений и постоянного консалтинга.
           </p>
           <a href="#contact" class="btn btn--cta">
             <span class="btn--cta__icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 12h15M13 6l6 6-6 6" stroke="#5a3853" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            Написать нам
+            Бесплатная консультация
           </a>
         </div>
 
@@ -150,7 +155,18 @@
               <path d="M275.58 311.622L134.391 311.622L134.391 452.811C212.364 452.811 275.58 389.595 275.58 311.622Z" fill="#5A3853"/>
             </g>
           </svg>
-          <img class="hero__photo" src="assets/team.png" alt="Две женщины — специалисты HR-формулы" />
+          <img class="hero__photo" src="assets/hero-pair.png" alt="Две женщины — консультанты Бюро КПД" />
+        </div>
+      </div>
+
+      <!-- инфо-полоса под разделителем (узел 2252:17) -->
+      <div class="hero__meta">
+        <div class="hero__meta-inner container">
+          <p>Для собственников бизнеса 50–500 человек</p>
+          <span class="hero__dot" aria-hidden="true"></span>
+          <p>Москва, Санкт-Петербург, регионы</p>
+          <span class="hero__dot" aria-hidden="true"></span>
+          <p>От часовой консультации до полной пересборки</p>
         </div>
       </div>
     </section>
@@ -504,6 +520,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

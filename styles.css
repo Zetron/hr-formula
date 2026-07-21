@@ -173,14 +173,20 @@ img {
   box-shadow: 0 8px 20px rgba(90, 56, 83, 0.28);
 }
 
+/* CTA в шапке — компактнее (по макету: 18px, 9/18) */
+.header__cta.btn--pill {
+  font-size: 18px;
+  padding: 9px 18px;
+}
+
 .btn--cta {
   background: var(--color-primary);
   border: 2px solid var(--color-primary-border);
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
-  gap: 12px;
-  padding: 11px 24px 11px 14px;
+  gap: 8px;
+  padding: 13px 16px;
   border-radius: var(--radius-pill);
 }
 
@@ -192,8 +198,8 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: 24px;
   background: #fff;
   border-radius: 50%;
   flex-shrink: 0;
@@ -248,7 +254,6 @@ img {
 .hero {
   position: relative;
   padding-top: var(--header-h);
-  border-bottom: 1px solid var(--color-divider);
   /* паттерн выходит за пределы контейнера — обрезаем по краю вьюпорта */
   overflow-x: clip;
 }
@@ -256,8 +261,10 @@ img {
 .hero__inner {
   position: relative;
   display: flex;
-  align-items: center;
-  min-height: calc(740px - var(--header-h));
+  align-items: flex-start;
+  /* контент начинается на 88px ниже шапки (176 в макете), низ — на 649 */
+  padding-top: 88px;
+  min-height: calc(649px - var(--header-h));
 }
 
 .hero__content {
@@ -266,27 +273,55 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 12px;
   padding-left: 80px;
-  max-width: 540px;
+  max-width: 640px; /* 560 контента + 80 паддинга */
 }
 
 .hero__title {
-  font-size: 48px;
+  font-size: 34px;
   font-weight: 600;
   color: var(--color-primary);
-  line-height: 1.1;
+  line-height: 42px;
 }
 
 .hero__subtitle {
-  font-size: 26px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.54;
+  line-height: 26px;
   color: var(--color-text-muted);
 }
 
 .hero__content .btn--cta {
-  margin-top: 32px;
+  margin-top: 20px; /* 32 в макете от текста, минус gap 12 */
+}
+
+/* инфо-полоса под разделителем (узел 2252:17) */
+.hero__meta {
+  border-top: 1px solid var(--color-divider);
+}
+
+.hero__meta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 32px;
+}
+
+.hero__meta-inner p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #574964;
+}
+
+.hero__dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #574964;
 }
 
 /* визуальный слой: паттерн + фото, занимает правую часть экрана */
@@ -362,10 +397,11 @@ img {
 .hero__photo {
   position: absolute;
   bottom: 0;
-  right: 6%;
-  width: auto;
-  height: 84%;
-  max-height: 620px;
+  /* правый край пары на 110px от края фрейма (110 / (62% от 1440)) */
+  right: 12.3%;
+  width: 548px;
+  max-width: 88%;
+  height: auto;
   z-index: 1;
   object-fit: contain;
 }
@@ -1534,33 +1570,28 @@ img {
   }
   .hero__content {
     padding-left: 0;
-    max-width: 460px;
+    max-width: 500px;
   }
-  .hero__title {
-    font-size: 42px;
-  }
-  .hero__subtitle {
-    font-size: 22px;
+  .hero__photo {
+    width: 480px;
+    right: 6%;
   }
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
   .hero__inner {
-    min-height: calc(700px - var(--header-h));
+    min-height: calc(600px - var(--header-h));
   }
   .hero__content {
-    max-width: 380px;
+    max-width: 420px;
   }
   .hero__media {
     width: 56%;
   }
   .hero__photo {
-    height: 76%;
+    width: 400px;
     right: 2%;
-  }
-  .btn--cta {
-    font-size: 20px;
   }
   .cta__card {
     min-height: 380px;
@@ -1862,16 +1893,28 @@ img {
   }
 
   .hero__title {
-    font-size: 34px;
+    font-size: 28px;
+    line-height: 36px;
   }
 
   .hero__subtitle {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 26px;
   }
 
   .hero__content .btn--cta {
-    margin-top: 24px;
+    margin-top: 16px;
+  }
+
+  /* инфо-полоса — в столбик, без точек */
+  .hero__meta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-top: 24px;
+  }
+  .hero__dot {
+    display: none;
   }
 
   /* паттерн + фото — отдельная сцена под текстом */
@@ -2188,18 +2231,12 @@ img {
 
 @media (max-width: 420px) {
   .hero__title {
-    font-size: 28px;
-  }
-  .hero__subtitle {
-    font-size: 16px;
+    font-size: 24px;
+    line-height: 32px;
   }
   .btn--cta {
     font-size: 18px;
-    padding: 9px 18px 9px 12px;
-  }
-  .btn--cta__icon {
-    width: 30px;
-    height: 30px;
+    padding: 11px 14px;
   }
 }
 
